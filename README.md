@@ -1,4 +1,4 @@
-# Current Weather Extension
+# Current Weather (Chrome Extension)
 
 ### Description: 
 
