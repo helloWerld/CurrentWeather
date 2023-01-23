@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "My Weather App",
+  "description": "An app to find local weather.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "weather.html",
+    "default_icon": "weatherapplogo.png"
+  }
+}

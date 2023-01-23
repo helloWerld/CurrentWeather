@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="weather.css">
+    
+</head>
+<body>
+    <section class="searchBar">
+        <form id="locationForm">
+            <input type="text" id="locationInput" placeholder="Enter a City or Zip Code">
+            <input type="submit" value="🔍" id="wBtn">
+        </form>
+    </section>
+    <section class="weatherLocation">
+        <h1 id="weatherCity">--</h1>
+    </section>
+    <section class="currentWeather">
+        <div class="tempCard">
+            <h2 id="conditions">---</h2>
+            <h1 id="temp">--</h1>
+            <h3 id="feels">---</h3>
+        </div>
+    </section>
+    <section class="humWindVis">
+        <div class="humWindVisCard">
+            <div class="cardSection">
+                <h2>Humidity</h2>
+                <h1 id="humidity">--</h1>
+            </div>
+            <div class="cardSection">
+                <h2>Wind Speed</h2>
+                <h1 id="wind">-- mph</h1>
+            </div>
+            <div class="cardSection">
+                <h2>Visibility</h2>
+                <h1 id="vis">-- miles</h1>
+            </div>
+        </div>
+    </section>
+    <section class="threeDay">
+        <div class="background">
+            <div class="forecastCard">
+                <h3>Tomorrow</h3>
+                <div class="forecastTempCard">
+                    <h3 id="dayOneCond">---</h3>
+                    <div>
+                        <div class="highlow">
+                            <h2 id="dayOneTempHi">--</h2>
+                            <h4>High</h4>
+                        </div>
+                        <div class="highlow">
+                            <h2 id="dayOneTempLo">--</h2>
+                            <h4>Low</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="forecastCard">
+                <h3>Next Day</h3>
+                <div class="forecastTempCard">
+                    <h3 id="dayTwoCond">---</h3>
+                    <div>
+                        <div class="highlow">
+                            <h2 id="dayTwoTempHi">--</h2>
+                            <h4>High</h4>
+                        </div>
+                        <div class="highlow">
+                            <h2 id="dayTwoTempLo">--</h2>
+                            <h4>Low</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="weather.js"></script>
+</body>
+</html>
