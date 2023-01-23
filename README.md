@@ -4,3 +4,4 @@ Description: This is a simple weather forecasting Chrome extension that utilizes
 
 Requirements: An API key is required to use this app. You can get a free API key from RapidAPI (https://rapidapi.com/weatherapi/api/weatherapi-com/).
 
+![weatherapi](https://user-images.githubusercontent.com/108149462/214126840-55be2d7f-eec9-4967-81c9-1314ee31b1ac.png)
