@@ -178,21 +178,21 @@ section {
     font-size: 30px;
 }
 
-.keyRequest {
+#keyRequest {
     display: inline-block;
     text-align: center;
 }
 
-.keyRequest h2{
+#keyRequest h2{
     font-size: 30px;
 }
 
-.keyRequest h3{
+#keyRequest h3{
     font-weight: 300;
     font-size: 25px;
 }
 
-.keyRequest input{
+#keyRequest input{
     font-size: 20px;
     margin-bottom: 25px;
 }
