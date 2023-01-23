@@ -2,7 +2,7 @@ body {
     margin: 5px 0 0 0;
     padding: 0;
     width: 450px;
-    height: 580px;
+    height: auto;
     background: url(backgrounds/cloud.png);
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -176,4 +176,27 @@ section {
 #dayOneTempLo, #dayTwoTempLo {
     font-weight: 400;
     font-size: 30px;
+}
+
+.keyRequest {
+    display: inline-block;
+    text-align: center;
+}
+
+.keyRequest h2{
+    font-size: 30px;
+}
+
+.keyRequest h3{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.keyRequest input{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+#unlocked {
+    display: none;
 }

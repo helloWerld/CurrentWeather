@@ -1,27 +1,27 @@
-// Elements
+let API_KEY = '';
 
+// Locked Elements
+const apiSubmit = document.getElementById('keyRequest');
+apiSubmit.addEventListener("submit", handleApiSubmit);
+
+const apiInput = document.getElementById('apiInput');
+
+// Unlocked Elements
 // Search Bar
 const locationForm = document.getElementById("locationForm");
 locationForm.addEventListener("submit", handleClick);
-
 // Current Weather Location
 const currentLocation = document.getElementById("weatherCity");
-
 // Current Weather Conditions
 const currentWeatherConditions = document.getElementById('conditions');
-
 //Current Temperature
 const currentTemp = document.getElementById("temp");
-
 //Current Feels Like
 const currentFeelsLike = document.getElementById("feels");
-
 //Current Humidity
 const currentHumidity = document.getElementById("humidity");
-
 //Current Wind Speed
 const currentWind = document.getElementById("wind");
-
 //Current Visibility
 const currentVis = document.getElementById("vis");
 
@@ -43,7 +43,7 @@ function handleClick(event) {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'abc508b46fmsh813f8910b29d2d8p14d034jsn6fe2aa7a93ff',
+            'X-RapidAPI-Key': API_KEY,
             'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
         }
     };
@@ -132,11 +132,11 @@ function updateBackground(currentWeatherConditions) {
     }
 }
 
-window.addEventListener("load", () => {
+function firstCall(API_KEY) {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'abc508b46fmsh813f8910b29d2d8p14d034jsn6fe2aa7a93ff',
+            'X-RapidAPI-Key': API_KEY,
             'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
         }
     };
@@ -148,4 +148,15 @@ window.addEventListener("load", () => {
             updateWeather(response);
         })
         .catch(err => console.error(err));
-});
+}
+
+function handleApiSubmit(event) {
+    event.preventDefault();
+    console.log('button press');
+    API_KEY = apiInput.value;
+    firstCall(API_KEY);
+    document.getElementById('locked').style.display = 'none';
+    document.getElementById('unlocked').style.display = 'inline-block';
+    document.body.style.height = '580px';
+}
+
